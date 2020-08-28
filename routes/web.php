@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('articles.list');
 });
+
+Route::get('/prices', function () {
+    return view('articles.prices');
+});
+
+Route::get('articles', 'ArticlesController@index');
